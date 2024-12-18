@@ -1,0 +1,242 @@
+/*--------------------НІЧНИЙ СТАНДАРТ----------------*/
+* {
+    color: white;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    height: 1645px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+}
+/*--------------------НІЧНИЙ СТАНДАРТ------------------*/
+
+
+/*-------------------НІЧНИЙ СКРОЛБАР-------------------*/
+::-webkit-scrollbar {
+    width: .6rem;
+    background-color: #ffffff;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #84a2ff;
+    border-radius: 999px;
+    border: 3px solid #4f7bff;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #9eb6ff;
+    border-radius: 999px;
+    border: 3px solid #7497ff;
+}
+/*--------------------НІЧНИЙ СКРОЛБАР------------------*/
+
+
+/*---------------------ХЕДЕР (ВЕРХНЯ ЧАСТИНА)--------------------*/
+.hi {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    padding: 30px;
+
+    font-size: 40px;
+    font-family: "Lobster", sans-serif;
+
+    background: linear-gradient(359deg, #004aff, #ffffff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.change_mode_light {
+    display: block;
+    display: flex;
+    padding: .5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: .9rem;
+    margin: 32px;
+    border: 2.5px solid #a9a9a9;
+    background-color: #dadada;;
+    transition: .3s ease;
+}
+
+.span_mode_light {
+    margin-left: 7px;
+    margin-top: 4.5px;
+    color: black;
+}
+
+.change_mode_light:hover {
+    background-color: #a9a9a9;
+}
+/*---------------------ХЕДЕР (ВЕРХНЯ ЧАСТИНА)--------------------*/
+
+
+/*---------------------МЕЙН (ОСНОВНА ЧАСТИНА)--------------------*/
+.paralax {
+    background: url(./img/paralax_image_night.png);
+    background-attachment: fixed;
+    height: 800px;
+}
+
+.about_site {
+    font-family: "Josefin Sans", sans-serif;
+    margin-bottom: 50px;
+}
+
+.what_is_this {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.wiki {
+    background-color: #3cd5fb;
+    padding: 3px;
+    transition: all 3s cubic-bezier(0, 1.55, 0.58, 1);
+}
+
+.wiki:hover {
+    background-color: #0085ff;
+}
+
+.link_for_nothing {
+    font-family: "Rubik Bubbles", system-ui;
+    background-color: white;
+    color: black;
+    padding: 6px;
+    border-radius: 10px;
+    border: 2px solid;
+    margin-bottom: 30px;
+    font-size: 21px;
+    transition: 1s cubic-bezier(0.33, -0.23, 0.5, 1.38);
+}
+
+.link_for_nothing:hover {
+    background-color: black;
+    color: white;
+
+    transform: scale(1.15) rotate(-8deg);
+}
+
+.animated_content_for_link {
+    display: flex;
+    justify-content: center;
+
+    animation: scrollAnimationForLink both;
+    animation-timeline: view(0% 5%);
+}
+
+.animated_content {
+    display: flex;
+    justify-content: center;
+
+    animation: scrollAnimation both;
+    animation-timeline: view(0% 5%);
+}
+
+.flex_for_center_image {
+    display: flex;
+    justify-content: center;
+}
+
+.image_night {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 365px;
+    height: 365px;
+    margin-bottom: 40px;
+}
+
+.image_night::before, .image_night::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: linear-gradient(45deg, #0058ff, #0000ff, #4e4eff, #3cd5fb, #9eecff);
+    width: 100px;
+    height: 100%;
+    background-size: 400%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+
+    animation: animatedBorderImg 10s linear infinite;
+}
+
+.image_night::after {
+    filter: blur(15px);
+}
+/*---------------------МЕЙН (ОСНОВНА ЧАСТИНА)--------------------*/
+
+
+/*---------------------ФУТЕР (НИЖНЯ ЧАСТИНА)-------------------*/
+.flex_footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.year {
+    margin-top: 5px;
+    margin-left: 40px;
+    font-family: "Mogra", system-ui;
+}
+
+.Git {
+    margin-right: 50px;
+    margin-top: 10px;
+
+    transition: all 1s ease;
+}
+
+.Git:hover {
+    transform: translateY(-5px);
+}
+/*---------------------ФУТЕР (НИЖНЯ ЧАСТИНА)-------------------*/
+
+/*---------------------АНІМАЦІЇ-------------------*/
+@keyframes animatedBorderImg {
+    0%{
+        background-position: 0 0;
+    }50%{
+        background-position: 300% 0;
+    }100%{
+        background-position: 0 0;
+    }
+}
+
+@keyframes scrollAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.5);
+    }50%{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes scrollAnimationForLink {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.8);
+    }20%{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+/*---------------------АНІМАЦІЇ-------------------*/
+
+
+/* nav.cng_mode header.change_mode {
+    color: darkolivegreen;
+} */
+
+
+/* #2d2d2d */
